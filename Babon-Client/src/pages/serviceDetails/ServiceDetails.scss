@@ -1,0 +1,250 @@
+.serviceDetails{
+    display: flex;
+    justify-content: center;
+
+    .container{
+        display: flex;
+        padding: 2% 8%;
+        gap: 2.5vw;
+
+        .left{
+            display: flex;
+            flex: 2;
+            flex-direction: column;
+            gap: 2vw;
+
+            .header{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 1vw;
+
+                h1{
+                    font-size: 1.8vw;
+                }
+
+                .seller{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4vw;
+
+                    .profile{
+                        width: 4vw;
+                        height: 4vw;
+                        cursor: pointer;
+                    }
+
+                    .seller-info{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        gap: 0.3vw;
+                        
+                        span{
+                            font-size: 1vw;
+                            cursor: pointer;
+                        }
+                        
+                        .rating{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            gap: 0.4vw;
+
+                            img{
+                                width: 1vw;
+                                height: 1vw;
+                            }
+
+                            span{
+                                font-size: 0.8vw;
+                                margin-bottom: -0.2vw;
+                            }
+
+                        }
+                        .contact-me{
+                            margin-bottom: -0.2vw;
+                            display: flex;
+                            justify-content: center;
+                            font-size: 0.8vw;
+                            width: 5.6vw;
+                            height: 1.3vw;
+                            background-color: #65451F;
+                            border: none;
+                            align-items: center;
+                            border-radius: 0.2vw;
+                            color: white;
+                            cursor: pointer;
+                        }
+                        
+                    }
+                }
+            }
+
+            .img-slider{
+
+                img{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 28vw;
+                    height: 28vw;
+                    object-fit: contain;
+                }
+            }
+
+            .desc{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                border: 1px solid #65451F;
+                padding: 2%;
+                border-radius: 0.2vw;
+                gap: 0.4vw;
+
+                h2{
+                    font-size: 1.2vw;
+                }
+
+                p{
+                    font-size: 0.8vw;
+                    color: rgb(70, 70, 70);
+                }
+
+            }
+
+            .reviews{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 1.5vw;
+                border: 1px solid #65451F;
+                padding: 2%;
+                border-radius: 0.2vw;
+
+                h2{
+                    font-size: 1.4vw;
+                }
+
+                .item{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1vw;
+
+                    .user{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 0.4vw;
+
+                        img{
+                            width: 2vw;
+                            height: 2vw;
+                        }
+
+                        span{
+                            font-size: 1vw;
+                        }
+                    }
+
+                    .ratings{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 0.4vw;
+
+                        img{
+                            width: 1vw;
+                            height: 1vw;
+                        }
+
+                        span{
+                            margin-bottom: -0.2vw;
+                            font-size: 0.8vw;
+                        }
+                    }
+
+                    p{
+                        font-size: 1vw;
+                    }
+
+                    hr{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .right{
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            background-color: rgba(118, 88, 39, 0.8);
+            border-radius: 0.4vw;
+            padding: 2%;
+            gap: 2vw;
+            position: sticky;
+            justify-content: center;
+            top: 7vw;
+            max-height: 22vw;
+
+            .price{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h3{
+                    font-size: 1.4vw;
+                    color: white;
+                }
+            }
+
+            p{
+                font-size: 1vw;
+                color: white;
+            }
+
+            .details{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 0.4vw;
+
+                .item{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 0.4vw;
+
+                    img{
+                        width: 3vw;
+                        height: 3vw;
+                    }
+
+                    span{
+                        font-size: 1vw;
+                        color: white;
+                    }
+                }
+            }
+
+            button{
+                background-color: white;
+                color: #65451F;
+                font-weight: 700;
+                border: none;
+                width: 100%;
+                height: 3vw;
+                border-radius: 0.4vw;
+                font-size: 1.2vw;
+                cursor: pointer;
+            }
+        }
+    }
+}
