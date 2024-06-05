@@ -11,9 +11,13 @@ const ServiceDetails = () => {
           <div className="header">
             <h1>Membersihkan toilet paling bersih 1 jagat</h1>
             <div className="seller">
-              <img src="/img/dingle.png" alt="" className="profile" />
+              <Link className='link' to="/serviceProvider">
+                <img src="/img/dingle.png" alt="" className="seller-pp" />
+              </Link>
               <div className="seller-info">
-                <span>Quandale Dingle</span>
+                <Link className='link' to="/serviceProvider"> 
+                  <span>Quandale Dingle</span>
+                </Link>
                 <div className="rating">
                   <img src="/img/star.png" alt="" className="star" />
                   <span>4.9</span>
