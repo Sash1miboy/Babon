@@ -1,4 +1,4 @@
-.login{
+.register{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,12 +26,12 @@
             }
         }
 
-        .login-box{
+        .register-box{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            background-color: white;
+            background-color: #F7DFB5;
             box-shadow: 0px 0px 75px 10px rgba(101, 69, 31, 0.30);
             width: 100%;
             height: 100%;
@@ -40,9 +40,9 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: #F7DFB5;
                 width: 40%;
                 height: 100%;
+
                 img{
                     width: 35vw;
                     height: auto;
@@ -54,6 +54,8 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                background-color: white;
+                padding: 2%;
                 width: 60%;
                 height: 100%;
                 gap: 1.4vw;
@@ -70,8 +72,9 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    width: 100%;
 
-                    .username-bar, .password-bar{
+                    .username-bar, .email-bar, .password-bar{
                         display: flex;
                         flex-direction: column;
                         width: 36vw;
@@ -92,13 +95,75 @@
                             outline: none;
                         }
                     }
+
+                    .mobile-date{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 36vw;
+
+                        .mobile-bar{
+                            display: flex;
+                            flex-direction: column;
+                            width: 17.5vw;
+                            gap: 0.4vw;
+    
+                            label{
+                                font-size: 1.6vw;
+                                font-weight: 400;
+                            }
+    
+                            input{
+                                width: 100%;
+                                border: 2px solid #65451F;
+                                border-radius: 5px;
+                                padding-left: 2%;
+                                height: 2.4vw;
+                                font-size: 1.2vw;
+                                outline: none;
+                            }
+                        }
+
+                        .date-bar{
+                            margin-right: -0.4vw;
+                            display: flex;
+                            flex-direction: column;
+                            width: 17.5vw;
+                            gap: 0.4vw;
+    
+                            label{
+                                font-size: 1.6vw;
+                                font-weight: 400;
+                            }
+    
+                            input{
+                                width: 100%;
+                                border: 2px solid #65451F;
+                                border-radius: 5px;
+                                padding: 0.06vw 0;
+                                padding-left: 2%;
+                                height: 2.3vw;
+                                font-size: 1.2vw;
+                                outline: none;
+                            }
+                        }
+                    }
                 }
 
-                .forgot{
-                    color: #65451F;
-                    font-weight: 500;
-                    font-size: 1.2vw;
-                    cursor: pointer;
+                .check-box{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.2vw;
+
+                    input{
+                        width: 1.4vw;
+                        height: 1.4vw;
+                    }
+
+                    span{
+                        font-size: 1.2vw;
+                    }
                 }
                 
                 button{
@@ -113,7 +178,7 @@
                     cursor: pointer;
                 }
 
-                .dont-have-account{
+                .already-have-account{
                     display: flex;
                     justify-content: center;
                     align-items: center;

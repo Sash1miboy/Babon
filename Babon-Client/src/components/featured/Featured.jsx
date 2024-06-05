@@ -11,7 +11,7 @@ const Featured = () => {
                     <h1>Accessible and Hassle-Free</h1>
                 </div>
                 <div className="search-bar-featured">
-                    <input className='search-input-featured' placeholder='Search...'/>
+                <input type="search" name="" id="" className='search-input-featured' placeholder='Search...'/>
                     <button className='search-button-featured'>
                         <img className='search-icon-featured' src="/img/Search.svg" alt="" />
                     </button>
