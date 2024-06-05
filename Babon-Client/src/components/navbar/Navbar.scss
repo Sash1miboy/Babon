@@ -3,6 +3,7 @@
     justify-content: center;
     background-color: white;
     position: sticky;
+    z-index: 1000;
     top: 0;
 
     .container{
@@ -13,6 +14,7 @@
         background-color: rgba(118, 88, 39, 0.8);
         width: 100%;
         padding: 0% 8%;
+        border-bottom: 0.4vw solid #65451F;
         .logo{
             .logo-babon{
                 width: 9vw;
@@ -33,19 +35,24 @@
                     padding-left: 2%;
                     border-color: transparent;
                     border-radius: 0.4vw 0vw 0vw 0.4vw;
+                    border: none;
                     font-size: 1vw;
                     outline: none;
+                    box-sizing: border-box;
                 }
 
                 .search-button{
-                    width: 2.6vw;
+                    width: 2.2vw;
                     height: 2.2vw;
                     background-color: #65451F;
                     border-color: transparent;
                     border-radius: 0vw 0.4vw 0.4vw 0vw;
+                    border: none;
                     display: flex;
                     justify-content: center;
+                    padding: 0;
                     align-items: center;
+                    box-sizing: border-box;
 
                     .search-icon{
                         width: 60%;
@@ -131,7 +138,7 @@
 
                 .user-options{
                     position: absolute;
-                    top: 3.5vw;
+                    top: 3vw;
                     right: 0;
                     padding: 10%;
                     background-color: white;

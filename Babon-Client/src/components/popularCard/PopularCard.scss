@@ -1,0 +1,26 @@
+.popularCard{
+    width: 20vw;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+
+    img{
+        width: 75%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 0.4vw;
+    }
+
+    .title{
+        font-weight: 500;
+        font-size: 1vw;
+        color: white;
+        position: absolute;
+        background-color: #65451F;
+        padding: 0.2vw 0.6vw;
+        border-radius: 0.4vw;
+        top: 3%;
+        left: 5%;
+    }
+}
