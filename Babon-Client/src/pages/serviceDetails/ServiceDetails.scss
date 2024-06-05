@@ -26,14 +26,20 @@
                 .seller{
                     display: flex;
                     align-items: center;
+                    justify-content: flex-start;
                     gap: 0.4vw;
 
-                    .profile{
-                        width: 4vw;
-                        height: 4vw;
-                        border-radius: 50%;
-                        cursor: pointer;
+                    .link{
+                        display: flex;
+                        justify-content: center;
+                        .seller-pp{
+                            width: 4vw;
+                            height: 4vw;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        } 
                     }
+
 
                     .seller-info{
                         display: flex;
@@ -41,11 +47,16 @@
                         justify-content: center;
                         align-items: flex-start;
                         gap: 0.3vw;
-                        
-                        span{
-                            font-size: 1vw;
-                            cursor: pointer;
+
+                        .link{
+                            display: flex;
+                            justify-content: center;
+                            span{
+                                font-size: 1vw;
+                                cursor: pointer;
+                            }
                         }
+                        
                         
                         .rating{
                             display: flex;

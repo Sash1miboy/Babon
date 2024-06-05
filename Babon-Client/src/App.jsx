@@ -19,6 +19,7 @@ import Services from "./pages/services/Services";
 import OrderList from "./pages/orderList/OrderList";
 import Login from "./pages/login/Login"
 import Register from "./pages/register/Register"
+import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import "./app.scss";
 
 import {
@@ -33,6 +34,7 @@ function App() {
     return(
       <div className="app">
         <Navbar/>
+        <ScrollToTop/>
         <Outlet/>
         <Footer/>
       </div>

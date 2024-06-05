@@ -62,7 +62,7 @@ const Navbar = () => {
                     }
                     <Link to="/OrderList" className='link'>Orders</Link>
                     {!currentUser && <Link to="" className='link'>Become a Seller</Link>}
-                    <Link to="/profile" className='link'>Settings</Link>
+                    <Link to="/profile" className='link'>Profile</Link>
                     <Link to="/login" className='link'>Logout</Link>
                   </div>}
                 </div>
