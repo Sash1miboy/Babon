@@ -22,7 +22,7 @@ const Navbar = () => {
             </div>
             <div className="search">
               <div className="search-bar">
-                <input className='search-input' placeholder='Search...'/>
+                <input type="search" name="" id="" className='search-input' placeholder='Search...'/>
                 <button className='search-button'>
                   <img className='search-icon' src="/img/Search.svg" alt="" />
                 </button>
@@ -63,7 +63,7 @@ const Navbar = () => {
                     <Link to="/OrderList" className='link'>Orders</Link>
                     {!currentUser && <Link to="" className='link'>Become a Seller</Link>}
                     <Link to="/profile" className='link'>Settings</Link>
-                    <span>Logout</span>
+                    <Link to="/login" className='link'>Logout</Link>
                   </div>}
                 </div>
               )}
