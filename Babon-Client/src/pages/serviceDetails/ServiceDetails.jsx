@@ -106,15 +106,19 @@ const ServiceDetails = () => {
           <p>Akan membersihkan toilet dari rumah customer sesuai keinginannya</p>
           <div className="details">
             <div className="item">
-              <img src="/img/check.png" alt="" />
+              <img src="/img/check2.png" alt="" />
               <span>Membersihkan Toilet</span>
             </div>
             <div className="item">
-              <img src="/img/check.png" alt="" />
+              <img src="/img/check2.png" alt="" />
               <span>Menghilangkan aroma tidak enak</span>
             </div>
             <div className="item">
-              <img src="/img/check.png" alt="" />
+              <img src="/img/check2.png" alt="" />
+              <span>Pasti kinclong</span>
+            </div>
+            <div className="item">
+              <img src="/img/check2.png" alt="" />
               <span>3 jam selesai</span>
             </div>
           </div>

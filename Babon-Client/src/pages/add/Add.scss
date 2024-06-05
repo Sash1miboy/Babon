@@ -1,0 +1,59 @@
+.add{
+    display: flex;
+    justify-content: center;
+    padding: 2% 8%;
+    
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.4vw;
+
+        h1{
+            font-size: 1.6vw;
+            color: #65451F;
+            font-weight: 800;
+        }
+
+        .sections{
+            display: flex;
+            justify-content: space-between;
+            gap: 5vw;
+
+            .left, .right{
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                gap: 0.6vw;
+                justify-content: space-between;
+
+                label{
+                    font-size: 1vw;
+                    color: black;
+                    font-weight: 500;
+                }
+
+                input, select, textarea{
+                    padding: 2%;
+                    font-size: 1vw;
+                    border: 1px solid #65451F;
+                    border-radius: 0.2vw;
+                    outline: none;
+                }
+
+                button{
+                    background-color: #65451F;
+                    color: white;
+                    font-size: 1vw;
+                    font-weight: 500;
+                    border: none;
+                    border-radius: 0.2vw;
+                    padding: 0.6vw;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+
+    }
+}
