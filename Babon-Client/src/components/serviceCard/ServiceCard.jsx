@@ -4,22 +4,18 @@ import { Link } from 'react-router-dom'
 
 const ServiceCard = ({item}) => {
   return (
-    <Link to="/serviceDetails/123">
-        <div className="serviceCard">
-            <div className="container">
-                <img src={item.img} alt="" />
-                <div className="info">
-                    <span className='title'>{item.title}</span>
-                    <span className='price'>Rp{item.price}</span>
-                </div>
-                <div className="rating">
-                    <div className="star">
-                        <img src="/img/star.png" alt="" />
-                        <span className='star-point'>{item.star}</span>
-                    </div>
-                    <hr />
-                    <span className='sold'>{item.sold}+ Sold</span>
-                </div>
+    <Link to="serviceDetails/123" className='link'>
+        <div className='serviceCard'>
+            <img src={item.img} alt="" className='service-img'/>
+            <div className="info">
+                <span className='title'>{item.title}</span>
+                <span className='price'>Rp{item.price}</span>
+            </div>
+            <div className="rating">
+                <img src="/img/star.png" alt="" className='star'/>
+                <span className='point'>{item.star}</span>
+                <hr />
+                <span className='sold'>{item.sold}+</span>
             </div>
         </div>
     </Link>

@@ -3,6 +3,7 @@ import "./Home.scss"
 import Featured from '../../components/featured/Featured'
 import Slide from '../../components/slide/Slide'
 import Sponsor from '../../components/sponsor/Sponsor'
+import Recommendation from '../../components/recommendation/Recommendation'
 
 const Home = () => {
   return (
@@ -10,9 +11,7 @@ const Home = () => {
       <Featured/>
       <Slide/>
       <Sponsor/>
-      <div className="recommendation">
-          <span className='text-rec'>Recommendation</span>
-      </div>
+      <Recommendation/>
     </div>
   )
 }
