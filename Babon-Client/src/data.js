@@ -142,11 +142,11 @@ export const services = [
     },
     {
         id: 12,
-        img: "/img/Tukang Kebun.png", 
-        title: "Jasa siram dan mengurus tanaman rumah",
-        price: "120.000",
-        star: "4.3",
-        sold: "300"
+        img: "/img/lyric.png", 
+        title: "Jasa feature rap/hip-hop untuk semua genre lagu",
+        price: "9.000.000",
+        star: "4.8",
+        sold: "100"
     },
     {
         id: 13,
@@ -158,11 +158,11 @@ export const services = [
     },
     {
         id: 14,
-        img: "/img/Jasa Curhat.png", 
-        title: "Jasa temen curhat untuk menghilangkan overthinking",
-        price: "100.000",
-        star: "4.2",
-        sold: "100"
+        img: "/img/producing.png", 
+        title: "Jasa membuat beat lagu untuk semua genre",
+        price: "12.000.000",
+        star: "4.8",
+        sold: "250"
     },
     {
         id: 15,

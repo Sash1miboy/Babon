@@ -15,6 +15,7 @@ import ServiceDetails from "./pages/serviceDetails/ServiceDetails";
 import ServiceProvider from "./pages/serviceProvider/ServiceProvider";
 import ServiceList from "./pages/serviceList/ServiceList";
 import Services from "./pages/services/Services";
+import OrderList from "./pages/orderList/OrderList";
 import "./app.scss";
 
 import {
@@ -79,6 +80,10 @@ function App() {
         {
           path:"/profile",
           element:<Profile/>
+        },
+        {
+          path:"/orderList",
+          element:<OrderList/>
         },
         {
           path:"/serviceDetails/:id",
