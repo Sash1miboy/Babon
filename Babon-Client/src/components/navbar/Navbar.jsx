@@ -8,9 +8,9 @@ const Navbar = () => {
 
   const currentUser= {
     id:1,
-    userName:"Endra Djati",
+    userName:"Kendrick Lamar",
     isSeller:true
-  }
+  };
 
   return (
     <div className='navbar'>
@@ -49,8 +49,8 @@ const Navbar = () => {
               {!currentUser && <button className='register-button'>Register</button>}
               {currentUser && (
                 <div className="user" onClick={()=>setOpen(!open)}>
-                  <img src="/img/Profile.svg" alt="" />
-                  <span className='username'>{currentUser?.userName}</span>
+                  <img src="/img/kdot.png" alt="" />
+                  <span className='username'>{currentUser?.userName.split(" ")[0]}</span>
                   {open && <div className="user-options">
                     {
                       currentUser?.isSeller && (
@@ -60,6 +60,7 @@ const Navbar = () => {
                         </>
                       )
                     }
+                    <Link to="/OrderList" className='link'>Orders</Link>
                     {!currentUser && <Link to="" className='link'>Become a Seller</Link>}
                     <Link to="/profile" className='link'>Settings</Link>
                     <span>Logout</span>

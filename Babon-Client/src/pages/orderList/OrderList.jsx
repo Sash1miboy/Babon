@@ -1,24 +1,28 @@
 import React from 'react'
-import "./ServiceList.scss"
+import "./OrderList.scss"
 import { Link } from 'react-router-dom'
 
-const ServiceList = () => {
+const OrderList = () => {
+
+    const currentUser= {
+        id:1,
+        userName:"Endra Djati",
+        isSeller:true
+    };
+
   return (
-    <div className='serviceList'>
-      <div className="container">
+    <div className='orderList'>
+        <div className="container">
         <div className="title">
           <h1>Services</h1>
-          <Link to="/add" className='link'>
-            <button>Add New Service</button>
-          </Link>
         </div>
         <table>
           <tr>
             <th>Image</th>
             <th>Title</th>
             <th>Price</th>
-            <th>Rating</th>
-            <th>Action</th>
+            <th>{currentUser?.isSeller ? "Buyer" : "Seller"}</th>
+            <th>Contact</th>
           </tr>
           <tr>
             <td>
@@ -31,27 +35,10 @@ const ServiceList = () => {
               Rp9.000.000
             </td>
             <td>
-              4.8
+              Metro Boomin
             </td>
             <td>
-              <img src="/img/Delete.svg" alt="" className='delete'/>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="/img/lyric.png" alt="" className='foto'/>
-            </td>
-            <td>
-              Jasa feature rap/hip-hop untuk semua genre lagu
-            </td>
-            <td>
-              Rp9.000.000
-            </td>
-            <td>
-              4.8
-            </td>
-            <td>
-              <img src="/img/Delete.svg" alt="" className='delete'/>
+              <img src="/img/Chat-2.svg" alt="" className='message'/>
             </td>
           </tr>
           <tr>
@@ -65,27 +52,10 @@ const ServiceList = () => {
               Rp9.000.000
             </td>
             <td>
-              4.8
+              Playboi Carti
             </td>
             <td>
-              <img src="/img/Delete.svg" alt="" className='delete'/>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="/img/lyric.png" alt="" className='foto'/>
-            </td>
-            <td>
-              Jasa feature rap/hip-hop untuk semua genre lagu
-            </td>
-            <td>
-              Rp9.000.000
-            </td>
-            <td>
-              4.8
-            </td>
-            <td>
-              <img src="/img/Delete.svg" alt="" className='delete'/>
+              <img src="/img/Chat-2.svg" alt="" className='message'/>
             </td>
           </tr>
           <tr>
@@ -99,10 +69,44 @@ const ServiceList = () => {
               Rp9.000.000
             </td>
             <td>
-              4.8
+              A$AP Rocky
             </td>
             <td>
-              <img src="/img/Delete.svg" alt="" className='delete'/>
+              <img src="/img/Chat-2.svg" alt="" className='message'/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="/img/lyric.png" alt="" className='foto'/>
+            </td>
+            <td>
+              Jasa feature rap/hip-hop untuk semua genre lagu
+            </td>
+            <td>
+              Rp9.000.000
+            </td>
+            <td>
+              Rihanna
+            </td>
+            <td>
+              <img src="/img/Chat-2.svg" alt="" className='message'/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img src="/img/lyric.png" alt="" className='foto'/>
+            </td>
+            <td>
+              Jasa feature rap/hip-hop untuk semua genre lagu
+            </td>
+            <td>
+              Rp9.000.000
+            </td>
+            <td>
+              Tupac Shakur
+            </td>
+            <td>
+              <img src="/img/Chat-2.svg" alt="" className='message'/>
             </td>
           </tr>
         </table>
@@ -111,4 +115,4 @@ const ServiceList = () => {
   )
 }
 
-export default ServiceList
+export default OrderList

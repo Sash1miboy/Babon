@@ -1,0 +1,66 @@
+.chats{
+    display: flex;
+    justify-content: center;
+
+    .container{
+        padding: 2% 8%;
+
+        .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h1{
+                font-size: 1.6vw;
+            }
+        }
+
+        table{
+            width: 80vw;
+            border-collapse: collapse;
+
+            tr{
+                height: 6vw;
+
+                th{
+                    text-align: center;
+                    font-size: 1.3vw;
+                }
+
+                td{
+                    font-size: 1vw;
+                    padding: 1vw;
+                    text-align: center;
+
+                    &:first-child{
+                        font-weight: 600;
+                    }
+
+                    &:nth-child(2), &:nth-child(3){
+                        color: rgb(70, 70, 70);
+                    }
+
+                }
+                
+                button{
+                    background-color: #65451F;
+                    color: white;
+                    font-size: 0.6vw;
+                    font-weight: 500;
+                    border: none;
+                    border-radius: 0.2vw;
+                    padding: 0.6vw;
+                    cursor: pointer;
+                }
+                
+                &.active{
+                    background-color: rgba(118, 88, 39, 0.2);
+
+                }
+
+            }
+            
+        }
+    }
+    
+}

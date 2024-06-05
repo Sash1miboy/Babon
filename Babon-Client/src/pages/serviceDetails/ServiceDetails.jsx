@@ -10,9 +10,9 @@ const ServiceDetails = () => {
           <div className="header">
             <h1>Membersihkan toilet paling bersih 1 jagat</h1>
             <div className="seller">
-              <img src="/img/Profile 2.svg" alt="" className="profile" />
+              <img src="/img/dingle.png" alt="" className="profile" />
               <div className="seller-info">
-                <span>Papa Brimstone</span>
+                <span>Quandale Dingle</span>
                 <div className="rating">
                   <img src="/img/star.png" alt="" className="star" />
                   <span>4.9</span>
@@ -47,8 +47,8 @@ const ServiceDetails = () => {
             <h2>Reviews</h2>
             <div className="item">
               <div className="user">
-                <img src="/img/Profile 2.svg" alt="" className="user" />
-                <span>Alfred Pennyworth</span>
+                <img src="/img/pink.png" alt="" className="user" />
+                <span>Pink Guy</span>
               </div>
               <div className="ratings">
                 <img src="/img/star.png" alt="" className="stars" />
@@ -64,8 +64,8 @@ const ServiceDetails = () => {
             </div>
             <div className="item">
               <div className="user">
-                <img src="/img/Profile 2.svg" alt="" className="user" />
-                <span>Alfred Pennyworth</span>
+                <img src="/img/skibidi.png" alt="" className="user" />
+                <span>Skibidi Toilet</span>
               </div>
               <div className="ratings">
                 <img src="/img/star.png" alt="" className="stars" />
@@ -81,8 +81,8 @@ const ServiceDetails = () => {
             </div>
             <div className="item">
               <div className="user">
-                <img src="/img/Profile 2.svg" alt="" className="user" />
-                <span>Alfred Pennyworth</span>
+                <img src="/img/silver.png" alt="" className="user" />
+                <span>Silver Surfer</span>
               </div>
               <div className="ratings">
                 <img src="/img/star.png" alt="" className="stars" />
