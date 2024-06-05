@@ -1,0 +1,172 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+    .container{
+        display: flex;
+        justify-content: center;
+        gap: 10vw;
+        background-color: rgba(118, 88, 39, 0.8);
+        width: 100%;
+        padding: 2% 8%;
+
+        .left{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2vw;
+
+            .content{
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+                gap: 6vw;
+
+                .about{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    width: 9vw;
+                    height: auto;
+                    gap: 0.8vw;
+
+                    h1{
+                        font-size: 1.6vw;
+                        color: black;
+                    }
+
+                    span{
+                        font-size: 0.8vw;
+                        color: white;
+                    }
+                }
+
+                .support{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    width: 8vw;
+                    height: auto;
+                    gap: 0.8vw;
+
+                    h1{
+                        font-size: 1.6vw;
+                        color: black;
+                    }
+
+                    span{
+                        font-size: 0.8vw;
+                        color: white;
+                    }
+                }
+
+                .community{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    width: 9.8vw;
+                    height: auto;
+                    gap: 0.8vw;
+
+                    h1{
+                        font-size: 1.6vw;
+                        color: black;
+                    }
+
+                    span{
+                        font-size: 0.8vw;
+                        color: white;
+                    }
+                }
+
+            }
+
+            .download-app{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+        
+                img{
+                    width: 7.8vw;
+                }
+            }
+
+        }
+
+        .right{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1vw;
+
+            .line{
+                hr{
+                    height: 20vw;
+                    border: 0.1vw solid white;
+                }
+            }
+
+            .content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 3.1vw;
+
+                .foot-babon{
+                    display: flex;
+                    flex-direction: column;
+                    width: 12vw;
+
+                    img{
+                        width: 9vw;
+                        height: auto;
+                    }
+
+                    span{
+                        margin-left: 8%;
+                        margin-top: -3%;
+                        font-size: 0.8vw;
+                        color: white;
+                    }
+                }
+
+                .touch{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    margin-left: 0.8vw;
+
+                    h1{
+                        font-size: 1.6vw;
+                        color: white;
+                    }
+
+                    span{
+                        font-size: 0.8vw;
+                        color: white;
+                    }
+                }
+
+                .social{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-left: 0.8vw;
+                    gap: 0.6vw;
+
+                    img{
+                        width: 2vw;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
