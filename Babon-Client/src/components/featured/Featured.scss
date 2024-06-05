@@ -1,0 +1,111 @@
+.featured{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: 32vw;
+
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(118, 88, 39, 0.8);
+        color: white;
+        width: 100%;
+        padding: 0% 8%;
+        gap: 5vw;
+
+        .left{
+            display: flex;
+            flex-direction: column;
+            gap: 1vw;
+
+            .slogan{
+                h1{
+                    font-size: 2.5vw;
+                }
+            }
+
+            .search-bar-featured{
+                display: flex;
+                align-items: center;
+
+                .search-input-featured{
+                    width: 30vw;
+                    height: 3.2vw;
+                    padding-left: 2%;
+                    border-color: transparent;
+                    border-radius: 0.4vw 0vw 0vw 0.4vw;
+                    border: none;
+                    font-size: 1vw;
+                    outline: none;
+                    box-sizing: border-box;
+                }
+
+                .search-button-featured{
+                    width: 3.2vw;
+                    height: 3.2vw;
+                    background-color: #65451F;
+                    border-color: transparent;
+                    border-radius: 0vw 0.4vw 0.4vw 0vw;
+                    border: none;
+                    display: flex;
+                    justify-content: center;
+                    padding: 0;
+                    align-items: center;
+                    box-sizing: border-box;
+
+                    .search-icon-featured{
+                        width: 60%;
+                        height: auto;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .popular{
+                display: flex;
+                align-items: center;
+                gap: 0.4vw;
+
+                span{
+                    font-weight: 500;
+                    font-size: 1vw;
+                }
+
+                button{
+                    color: white;
+                    background-color: #65451F;
+                    border: none;
+                    padding: 0.3vw 0.7vw;
+                    border-radius: 0.4vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    font-size: 0.6vw;
+                }
+            }
+        }
+
+        .middle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            hr{
+                height: 26vw;
+            }
+        }
+
+        .right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 92%;
+                height: auto;
+            }
+        }
+    }
+}
