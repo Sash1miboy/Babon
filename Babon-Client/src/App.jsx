@@ -4,6 +4,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Add from "./pages/add/Add";
 import Cart from "./pages/cart/Cart";
+import Category from "./pages/category/Category";
 import Chat from "./pages/chat/Chat";
 import Chats from "./pages/chats/Chats";
 import Help from "./pages/help/Help";
@@ -62,6 +63,10 @@ function App() {
         {
           path:"/chats",
           element:<Chats/>
+        },
+        {
+          path:"/category",
+          element:<Category/>
         },
         {
           path:"/help",
