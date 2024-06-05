@@ -1,0 +1,15 @@
+Project AOL Software Engineering
+Buat run project frontend
+- Install node.js dari web: https://nodejs.org/en/download
+- ketik npm install --global yarn di terminal vscode
+- jika dapat error "yarn.ps1 cannot be loaded because running scripts is disabled on this system."
+- run powershell sebagai admin lalu paste ini "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned" dan ketik Y
+- di terminal vscode ketik "yarn run dev" copy paste linknya web dari terminal
+
+Babon
+
+Version 0.1a: 
+- Hanya terdapat fronted navbar dari ui 
+
+bug:
+- ketika currentUser dikomen atau di apus maka konten web tidak muncul

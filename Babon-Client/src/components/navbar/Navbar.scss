@@ -1,0 +1,149 @@
+.navbar{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    position: sticky;
+    top: 0;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        background-color: rgba(118, 88, 39, 0.8);
+        width: 100%;
+        padding: 0% 8%;
+        .logo{
+            .logo-babon{
+                width: 9vw;
+                height: auto;
+                cursor: pointer;
+            }  
+        }
+
+        .search{
+            .search-bar{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .search-input{
+                    width: 24vw;
+                    height: 2.2vw;
+                    padding-left: 2%;
+                    border-color: transparent;
+                    border-radius: 0.4vw 0vw 0vw 0.4vw;
+                    font-size: 1vw;
+                    outline: none;
+                }
+
+                .search-button{
+                    width: 2.6vw;
+                    height: 2.2vw;
+                    background-color: #65451F;
+                    border-color: transparent;
+                    border-radius: 0vw 0.4vw 0.4vw 0vw;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .search-icon{
+                        width: 60%;
+                        height: auto;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .links{
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            gap: 1.2vw;
+
+            img{
+                width: 1.7vw;
+                height: 1.7vw;
+                cursor: pointer;
+                object-fit: cover;
+            }
+        }
+
+        .account-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            gap: 0.8vw;
+
+            .login-button{
+                background-color: white;
+                border-color: transparent;
+                color: #65451F;
+                font-weight: 900;
+                font-size: 1vw;
+                padding: 0.3vw 0.8vw;
+                border-radius: 0.3vw;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: #65451F;
+                    color: white;
+                }
+            }
+
+            .register-button{
+                background-color: white;
+                border-color: transparent;
+                color: #65451F;
+                font-weight: 900;
+                font-size: 1vw;
+                padding: 0.3vw 0.8vw;
+                border-radius: 0.3vw;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: #65451F;
+                    color: white;
+                }
+            }
+
+            .user{
+                display: flex;
+                align-items: center;
+                gap: 0.3vw;
+                position: relative;
+
+                .username{
+                    font-size: 1vw;
+                    font-weight: 600;
+                    color: white;
+                }
+
+                img{
+                    width: 2vw;
+                    height: 2vw;
+                    cursor: pointer;
+                    object-fit: cover;
+                }
+
+                .user-options{
+                    position: absolute;
+                    top: 3.5vw;
+                    right: 0;
+                    padding: 10%;
+                    background-color: white;
+                    border-radius: 0.6vw;
+                    border: 2px solid #65451F;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.8vw;
+                    width: 20vw;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
