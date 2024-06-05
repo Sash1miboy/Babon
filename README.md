@@ -11,7 +11,7 @@ in the terminal
 
 type
 
-yarn or npm (for downloading all the dependecies)
+yarn (for downloading all the dependecies)
 
 yarn run dev
 
