@@ -1,0 +1,63 @@
+.cart{
+    display: flex;
+    justify-content: center;
+
+    .container{
+        padding: 2% 8%;
+
+        .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h1{
+                font-size: 1.6vw;
+            }
+
+        }
+
+        table{
+            width: 80vw;
+            border-collapse: collapse;
+
+            tr{
+                height: 4vw;
+
+                th{
+                    text-align: center;
+                    font-size: 1.3vw;
+                }
+
+                td{
+                    font-size: 1vw;
+                    text-align: center;
+
+                    .foto{
+                        width: 3.2vw;
+                        height: auto;
+                        object-fit: cover;
+
+                    }
+
+                    button{
+                        background-color: #65451F;
+                        color: white;
+                        font-size: 0.8vw;
+                        font-weight: 600;
+                        border: none;
+                        border-radius: 0.2vw;
+                        padding: 0.6vw;
+                        cursor: pointer;
+                    }
+                }
+
+                &:nth-child(even){
+                    background-color: rgba(118, 88, 39, 0.2);
+                }
+
+            }
+            
+        }
+    }
+    
+}

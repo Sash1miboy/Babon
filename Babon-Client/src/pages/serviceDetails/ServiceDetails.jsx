@@ -1,6 +1,7 @@
 import React from 'react'
 import "./ServiceDetails.scss"
 import { Slider } from 'infinite-react-carousel'
+import { Link } from 'react-router-dom'
 
 const ServiceDetails = () => {
   return (
@@ -122,7 +123,9 @@ const ServiceDetails = () => {
               <span>3 jam selesai</span>
             </div>
           </div>
-          <button>Order</button>
+          <Link to="/order" className='link'>
+            <button>Order</button>
+          </Link>
         </div>
       </div>
     </div>
