@@ -1,0 +1,32 @@
+.recommendation{
+    padding: 0 8%;
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+
+        .recommendation{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            .text-rec{
+                font-size: 2vw;
+                font-weight: 700;
+                color: #FFEAC6;
+                background-color: #765827;
+                padding: 1vw 34vw;
+                border-radius: 5vw;
+            }
+        
+        }
+
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+    }
+}
