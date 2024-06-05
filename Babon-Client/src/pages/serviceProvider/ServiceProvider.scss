@@ -1,0 +1,202 @@
+.serviceProvider{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+
+        .header{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: #C8AE7D;
+            width: 100%;
+            padding: 2% 8%;
+            box-sizing: border-box;
+            gap: 1vw;
+
+            .seller{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 2vw;
+    
+                img{
+                    border-radius: 10%;
+                    width: 15vw;
+                    height: 15vw;
+                    object-fit: cover;
+                }
+    
+                .item{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1.4vw;
+    
+                    h1{
+                        font-size: 3vw;
+                    }
+    
+                    .rating{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 0.6vw;
+    
+                        img{
+                            width: 3vw;
+                            height: 3vw;
+                        }
+    
+                        span{
+                            font-size: 1.8vw;
+                            font-weight: 700;
+                        }
+    
+                        hr{
+                            height: 1.8vw;
+                            border: 1px solid black;
+                        }
+                    }
+    
+                    .location{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 0.6vw;
+    
+                        img{
+                            width: 3vw;
+                            height: 3vw;
+                        }
+    
+                        span{
+                            font-size: 1.8vw;
+                            font-weight: 700;
+                        }
+    
+                    }
+                }
+            }
+
+            .seller-desc{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1vw;
+
+                h1{
+                    font-size: 3vw;
+                }
+
+                p{
+                    font-size: 1.8vw;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .seller-service{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            box-sizing: border-box;
+            padding: 2% 8%;
+            width: 100%;
+            gap: 1.6vw;
+
+            h1{
+                font-size: 3vw;
+            }
+
+            .cards{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
+
+        .seller-review{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 2% 8%;
+            gap: 1vw;
+
+            h1{
+                font-size: 3vw;
+            }
+
+            .reviews{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 1.5vw;
+                border: 1px solid #65451F;
+                padding: 2%;
+                border-radius: 0.2vw;
+    
+                .item{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1vw;
+    
+                    .user{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 0.4vw;
+    
+                        img{
+                            width: 2vw;
+                            height: 2vw;
+                            border-radius: 50%;
+                        }
+    
+                        span{
+                            font-size: 1vw;
+                        }
+                    }
+    
+                    .ratings{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 0.4vw;
+    
+                        img{
+                            width: 1vw;
+                            height: 1vw;
+                        }
+    
+                        span{
+                            margin-bottom: -0.2vw;
+                            font-size: 0.8vw;
+                        }
+                    }
+    
+                    p{
+                        font-size: 1vw;
+                    }
+    
+                    hr{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+
+    }
+}

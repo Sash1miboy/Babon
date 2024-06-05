@@ -1,0 +1,272 @@
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C8AE7D;
+    padding: 3% 8%;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        padding: 2%;
+        border-radius: 0.4vw;
+        width: 100%;
+
+        .left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-left: 2%;
+            gap: 1vw;
+            
+            .profile-picture{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 0.6vw;
+                background-color: white;
+                box-shadow: 0px 0px 20px 5px rgba(101, 69, 31, 0.47);
+                padding: 5%;
+                border-radius: 0.4vw;
+                box-sizing: border-box;
+
+                img{
+                    width: 28vw;
+                    height: 28vw;
+                    border-radius: 0.4vw;
+                    box-sizing: border-box;
+                }
+
+                label{
+                    font-size: 1.4vw;
+                    border: 1px solid #777167;
+                    padding: 2%;
+                    border-radius: 0.4vw;
+                    cursor: pointer;
+                    font-weight: 500;
+                    color: #777167;
+                    width: 100%;
+                    box-sizing: border-box;
+                    text-align: center;
+                }
+
+                input{
+                    opacity: 0;
+                    position: absolute;
+                    z-index: -1;
+                }
+            }
+
+            button{
+                outline: none;
+                font-size: 1.4vw;
+                color: #777167;
+                background-color: transparent;
+                cursor: pointer;
+                border: 1px solid #777167;
+                padding: 2%;
+                width: 100%;
+                border-radius: 0.4vw;
+                font-weight: 500;
+            }
+        }
+
+        .right{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 2% 0 0 7%;
+            box-sizing: border-box;
+            width: 100%;
+            gap: 1.4vw;
+
+            h1{
+                display: flex;
+                font-size: 1.6vw;
+                color: #777167;
+                gap: 1vw;
+
+                button{
+                    outline: none;
+                    border: none;
+                    background-color: transparent;
+                    font-size: 1.4vw;
+                    color: #777167;
+                    cursor: pointer;
+                }
+            }
+
+            .biodata{
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 5vw;
+                
+                .left-bio{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 0.6vw;
+
+                    span{
+                        font-size: 1.4vw;
+                    }
+                }
+
+                .right-bio{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 0.6vw;
+
+                    .name-input{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 1vw;
+                        span{
+                            font-size: 1.4vw;
+                        }
+    
+                        button{
+                            outline: none;
+                            border: none;
+                            background-color: transparent;
+                            font-size: 1.4vw;
+                            color: #777167;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .dob-input{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 1vw;
+                        span{
+                            font-size: 1.4vw;
+                        }
+    
+                        button{
+                            outline: none;
+                            border: none;
+                            background-color: transparent;
+                            font-size: 1.4vw;
+                            color: #777167;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .gender-input{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 1vw;
+                        span{
+                            font-size: 1.4vw;
+                        }
+    
+                        button{
+                            outline: none;
+                            border: none;
+                            background-color: transparent;
+                            font-size: 1.4vw;
+                            color: #777167;
+                            cursor: pointer;
+                        }
+                    }
+
+                }
+
+            }
+
+            .contact{
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 3.3vw;
+                
+                .left-contacts{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 0.6vw;
+
+                    span{
+                        font-size: 1.4vw;
+                    }
+                }
+
+                .right-contacts{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 0.6vw;
+
+                    .email-input{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 1vw;
+                        span{
+                            font-size: 1.4vw;
+                        }
+    
+                        button{
+                            outline: none;
+                            border: none;
+                            background-color: transparent;
+                            font-size: 1.4vw;
+                            color: #777167;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .phone-input{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 1vw;
+                        span{
+                            font-size: 1.4vw;
+                        }
+    
+                        button{
+                            outline: none;
+                            border: none;
+                            background-color: transparent;
+                            font-size: 1.4vw;
+                            color: #777167;
+                            cursor: pointer;
+                        }
+                    }
+
+                }
+
+            }
+
+            .about-profile{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                box-sizing: border-box;
+
+                p{
+                    font-size: 1.4vw;
+                    width: 43vw;
+                    height: 18vw;
+                }
+            }
+
+        }
+    }
+}
