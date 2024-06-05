@@ -1,0 +1,199 @@
+.order{
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 100%;
+        padding: 2% 8%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            border: 2px solid #65451F;
+            border-radius: 0.4vw;
+            width: 80vw;
+            box-sizing: border-box;
+
+            .header{
+                background-color: #65451F;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 1.4vw;
+                border-radius: 0.1vw 0.1vw 0 0;
+                width: 100%;
+                padding: 1% 2%;
+                box-sizing: border-box;
+    
+                img{
+                    object-fit: contain;
+                    width: 12%;
+                    height: auto;
+                    border-radius: 0.4vw;
+                }
+    
+                h1{
+                    font-size: 2vw;
+                    color: white;
+                }
+            }
+
+            .item{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding: 2%;
+                box-sizing: border-box;
+                width: 100%;
+                gap: 2vw;
+
+                .what-to-do{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 0.4vw;
+                    box-sizing: border-box;
+                    width: 100%;
+
+                    label{
+                        font-size: 1.4vw;
+                        font-weight: 700;
+                    }
+
+                    input{
+                        border: 1px solid #65451F;
+                        border-radius: 0.2vw;
+                        padding: 0.6vw;
+                        width: 100%;
+                        font-size: 1vw;
+                        box-sizing: border-box;
+                        width: 100%;
+                        outline: none;
+                    }
+                }
+
+                .time-period{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 0.4vw;
+                    box-sizing: border-box;
+                    width: 100%;
+
+                    label{
+                        font-size: 1.4vw;
+                        font-weight: 700;
+                    }
+
+                    .period{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        gap: 1vw;
+
+                        .from, .to{
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            gap: 0.6vw;
+                            width: 50%;
+
+                            span{
+                                font-size: 1.2vw;
+                                font-weight: 500;
+                            }
+
+                            input{
+                            border: 1px solid #65451F;
+                            border-radius: 0.2vw;
+                            padding: 0.6vw;
+                            width: 100%;
+                            font-size: 1vw;
+                            width: 100%;
+                            outline: none;
+                            }
+                        }
+
+                    }
+
+                }
+
+                .info{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 0.4vw;
+                    box-sizing: border-box;
+                    width: 100%;
+
+                    label{
+                        font-size: 1.4vw;
+                        font-weight: 700;
+                        
+                        span{
+                            font-size: 1vw;
+                            font-weight: 400;
+                            color: gray;
+                        }
+                    }
+
+                    textarea{
+                        border: 1px solid #65451F;
+                        border-radius: 0.2vw;
+                        padding: 0.6vw;
+                        width: 100%;
+                        font-size: 1vw;
+                        box-sizing: border-box;
+                        width: 100%;
+                        outline: none;
+                        resize: none;
+                    }
+                }
+
+                .btn{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    gap: 1vw;
+                    width: 100%;
+                    box-sizing: border-box;
+
+                    .link{
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        box-sizing: border-box;
+                        width: 9%;
+
+                        button{
+                            border: none;
+                            background-color: #65451F;
+                            padding: 5% 0;
+                            border-radius: 0.2vw;
+                            color: white;
+                            font-size: 1vw;
+                            font-weight: 500;
+                            cursor: pointer;
+                            width: 100%;
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+    }
+}

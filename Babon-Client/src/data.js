@@ -87,7 +87,7 @@ export const services = [
     {
         id: 5,
         img: "/img/Service AC.png", 
-        title: "Jasa service AC rusak",
+        title: "Jasa service AC rusak atau cleaning AC",
         price: "150.000",
         star: "4.4",
         sold: "300"
