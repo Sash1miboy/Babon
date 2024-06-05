@@ -16,6 +16,8 @@ import ServiceProvider from "./pages/serviceProvider/ServiceProvider";
 import ServiceList from "./pages/serviceList/ServiceList";
 import Services from "./pages/services/Services";
 import OrderList from "./pages/orderList/OrderList";
+import Login from "./pages/login/Login"
+import Register from "./pages/register/Register"
 import "./app.scss";
 
 import {
@@ -103,7 +105,16 @@ function App() {
         }
       ]
     },
+    {
+      path:"/login",
+      element:<Login/>
+    },
+    {
+      path:"/register",
+      element:<Register/>
+    }
   ]);
+  
 
   return (
     <div>
