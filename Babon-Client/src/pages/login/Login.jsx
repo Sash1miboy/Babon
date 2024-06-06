@@ -1,8 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Login.scss"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import newRequest from '../../utils/newRequest'
 
 const Login = () => {
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState(null)
+
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      const res =  await newRequest.post("/auth/login", {username, password});
+      localStorage.setItem("currentUser", JSON.stringify(res.data))
+      navigate("/")
+    } catch (err) {
+      setError(err.response.data);
+    }
+  }
+
   return (
     <div className='login'>
       <div className="container">
@@ -18,24 +36,23 @@ const Login = () => {
           <div className="left">
             <img src="/img/sitting.png" alt="" />
           </div>
-          <div className="right">
+          <form className="right" onSubmit={handleSubmit}>
             <h1>Login</h1>
-            <div className="input-bar">
-              <div className="username-bar">
-                <label htmlFor="">Username</label>
-                <input type="text" placeholder='Enter your username'/>
+              <div className="input-bar">
+                <div className="username-bar">
+                  <label htmlFor="">Username</label>
+                  <input type="text" name='username' placeholder='Enter your username' onChange={e=>setUsername(e.target.value)}/>
+                </div>
+                <div className="password-bar">
+                  <label htmlFor="">Password</label>
+                  <input type="password" name="password" id="" placeholder='Enter your password' onChange={e=>setPassword(e.target.value)}/>
+                </div>
               </div>
-              <div className="password-bar">
-                <label htmlFor="">Password</label>
-                <input type="password" name="" id="" placeholder='Enter your password'/>
-              </div>
-            </div>
-            <span className="forgot">Forgot your password?</span>
-            <Link to="/" className='link'>
-              <button>Login</button>
-            </Link>
-            <span className="dont-have-account">Don't have an account? <Link to="/register" className='link'>Register here</Link></span>
-          </div>
+              <span className="forgot">Forgot your password?</span>
+              <button type="submit">Login</button>
+              {error && error}
+              <span className="dont-have-account">Don't have an account? <Link to="/register" className='link'>Register here</Link></span>
+          </form>
         </div>
       </div>
     </div>

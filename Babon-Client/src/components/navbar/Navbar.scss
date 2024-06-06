@@ -86,35 +86,41 @@
             justify-items: center;
             gap: 0.8vw;
 
-            .login-button{
-                background-color: white;
-                border-color: transparent;
-                color: #65451F;
-                font-weight: 900;
-                font-size: 1vw;
-                padding: 0.3vw 0.8vw;
-                border-radius: 0.3vw;
-                cursor: pointer;
-
-                &:hover{
-                    background-color: #65451F;
-                    color: white;
+            .link{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .login-button{
+                    background-color: white;
+                    border-color: transparent;
+                    color: #65451F;
+                    font-weight: 900;
+                    font-size: 1vw;
+                    padding: 0.3vw 0.8vw;
+                    border-radius: 0.3vw;
+                    cursor: pointer;
+    
+                    &:hover{
+                        background-color: #65451F;
+                        color: white;
+                    }
                 }
-            }
-
-            .register-button{
-                background-color: white;
-                border-color: transparent;
-                color: #65451F;
-                font-weight: 900;
-                font-size: 1vw;
-                padding: 0.3vw 0.8vw;
-                border-radius: 0.3vw;
-                cursor: pointer;
-
-                &:hover{
-                    background-color: #65451F;
-                    color: white;
+    
+                .register-button{
+                    background-color: white;
+                    border-color: transparent;
+                    color: #65451F;
+                    font-weight: 900;
+                    font-size: 1vw;
+                    padding: 0.3vw 0.8vw;
+                    border-radius: 0.3vw;
+                    cursor: pointer;
+    
+    
+                    &:hover{
+                        background-color: #65451F;
+                        color: white;
+                    }
                 }
             }
 
