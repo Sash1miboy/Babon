@@ -38,10 +38,14 @@ const Navbar = () => {
               </div>
             </div>
             <div className="links">
-              <img className='notif-icon' src="/img/Notif.svg" alt="" />
-              <Link className='link' to="/cart">
-                <img className='cart-icon' src="/img/Cart.svg" alt="" />
-              </Link>
+            {currentUser && (
+                <img className='notif-icon' src="/img/Notif.svg" alt="" />
+              )}
+              {currentUser && !currentUser.isSeller && (
+                <Link className='link' to="/cart">
+                  <img className='cart-icon' src="/img/Cart.svg" alt="" />
+                </Link>
+              )}
               {currentUser && (
                 <Link className='link' to="/chats">
                   <img className='chat-icon' src="/img/Chat.svg" alt="" />
