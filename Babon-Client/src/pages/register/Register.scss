@@ -150,11 +150,28 @@
                     }
                 }
 
+                .become-seller{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.4vw;
+
+                    input{
+                        width: 1.4vw;
+                        height: 1.4vw;
+                    }
+
+                    span{
+                        font-size: 1.2vw;
+                    }
+
+                }
+
                 .check-box{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    gap: 0.2vw;
+                    gap: 0.4vw;
 
                     input{
                         width: 1.4vw;

@@ -27,6 +27,7 @@ import {
   RouterProvider,
   Outlet
 } from "react-router-dom";
+import Success from "./pages/success/Success";
 
 function App() {
 
@@ -109,6 +110,10 @@ function App() {
         {
           path:"/services",
           element:<Services/>
+        },
+        {
+          path:"/success",
+          element:<Success/>
         }
       ]
     },

@@ -35,7 +35,7 @@ const Cart = () => {
               Quandale Dingle
             </td>
             <td>
-              <Link to="/" className='link'>
+              <Link to="/payment" className='link'>
                 <button>Check Out</button>
               </Link>
             </td>
@@ -57,7 +57,7 @@ const Cart = () => {
               Quandale Dingle
             </td>
             <td>
-              <Link to="/" className='link'>
+              <Link to="/payment" className='link'>
                 <button>Check Out</button>
               </Link>
             </td>
@@ -79,7 +79,7 @@ const Cart = () => {
               Quandale Dingle
             </td>
             <td>
-              <Link to="/" className='link'>
+              <Link to="/payment" className='link'>
                 <button>Check Out</button>
               </Link>
             </td>
@@ -101,7 +101,7 @@ const Cart = () => {
               Quandale Dingle
             </td>
             <td>
-              <Link to="/" className='link'>
+              <Link to="/payment" className='link'>
                 <button>Check Out</button>
               </Link>
             </td>
@@ -123,7 +123,7 @@ const Cart = () => {
               Quandale Dingle
             </td>
             <td>
-              <Link to="/" className='link'>
+              <Link to="/payment" className='link'>
                 <button>Check Out</button>
               </Link>
             </td>
