@@ -37,7 +37,7 @@ const Order = () => {
               <Link to="/cart" className='link'>
                 <button>Add to cart</button>
               </Link>
-              <Link to="/" className='link'>
+              <Link to="/payment" className='link'>
                 <button>Check Out</button>
               </Link>
             </div>
