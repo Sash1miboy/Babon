@@ -50,7 +50,7 @@ export const getServices = async (req, res, next)=>{
         ...(q.search && {title: {$regex: q.search, $options: "i"}})
     };
     try {
-        const services = await Service.find(filters)
+        const services = await Service.find(filters).sort({ [q.sort]: -1 });    
         res.status(200).send(services);
     } catch (err) {
         next(err);
