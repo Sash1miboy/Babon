@@ -10,8 +10,8 @@ import {verifyToken} from "../middleware/jwt.js";
 const router = express.Router();
 
 router.post("/", verifyToken, createService)
-router.post("/:id", verifyToken, deleteService)
-router.post("/single/:id", verifyToken, getService)
-router.post("/", verifyToken, getServices)
+router.delete("/:id", verifyToken, deleteService)
+router.get("/single/:id", verifyToken, getService)
+router.get("/", verifyToken, getServices)
 
 export default router;
