@@ -38,22 +38,22 @@ const orderSchema = new Schema({
         type:String,
         require:true,
     },
-    serviceToDo:{
-        type:String,
-        require:true,
-    },
-    fromDate:{
-        type:Date,
-        require:true,
-    },
-    toDate:{
-        type:Date,
-        require:true,
-    },
-    info:{
-        type:String,
-        require:false,
-    }
+    // serviceToDo:{
+    //     type:String,
+    //     require:true,
+    // },
+    // fromDate:{
+    //     type:Date,
+    //     require:true,
+    // },
+    // toDate:{
+    //     type:Date,
+    //     require:true,
+    // },
+    // info:{
+    //     type:String,
+    //     require:false,
+    // }
 },{
     timestamps:true
 });
