@@ -54,122 +54,122 @@ export const cards = [
 export const services = [
     {
         id: 1,
-        img: "/img/Cleaning.png", 
+        coverImage: "/img/Cleaning.png", 
         title: "Membersihkan toilet paling bersih 1 jagat",
         price: "150.000",
-        star: "4.9",
+        starNumber: "4.9",
         sold: "100"
     },
     {
         id: 2,
-        img: "/img/Laundry.png", 
+        coverImage: "/img/Laundry.png", 
         title: "Jasa pencuci baju datang ke rumah",
         price: "100.000",
-        star: "4.9",
+        starNumber: "4.9",
         sold: "500"
     },
     {
         id: 3,
-        img: "/img/Sedot WC.png", 
+        coverImage: "/img/Sedot WC.png", 
         title: "Jasa Sedot WC tersumbat 2 jam selesai",
         price: "250.000",
-        star: "4.2",
+        starNumber: "4.2",
         sold: "100"
     },
     {
         id: 4,
-        img: "/img/Konten.png", 
+        coverImage: "/img/Konten.png", 
         title: "Jasa buat konten tiktok, IG Reels, youtube, dll",
         price: "300.000",
-        star: "4.7",
+        starNumber: "4.7",
         sold: "1000"
     },
     {
         id: 5,
-        img: "/img/Service AC.png", 
+        coverImage: "/img/Service AC.png", 
         title: "Jasa service AC rusak atau cleaning AC",
         price: "150.000",
-        star: "4.4",
+        starNumber: "4.4",
         sold: "300"
     },
     {
         id: 6,
-        img: "/img/Pindah Barang.png", 
+        coverImage: "/img/Pindah Barang.png", 
         title: "Jasa pemindahan barang termasuk mobil box",
         price: "500.000",
-        star: "4.8",
+        starNumber: "4.8",
         sold: "50"
     },
     {
         id: 7,
-        img: "/img/Laporan.png", 
+        coverImage: "/img/Laporan.png", 
         title: "Jasa penulisan laporan penilitian/tugas",
         price: "100.000",
-        star: "4.9",
+        starNumber: "4.9",
         sold: "2000"
     },
     {
         id: 8,
-        img: "/img/Foto.png", 
+        coverImage: "/img/Foto.png", 
         title: "Jasa foto produk/barang professional",
         price: "250.000",
-        star: "4.5",
+        starNumber: "4.5",
         sold: "600"
     },
     {
         id: 9,
-        img: "/img/Cuci Spring Bed.png", 
+        coverImage: "/img/Cuci Spring Bed.png", 
         title: "Membersihkan tempat tidur menggunakan alat profesional",
         price: "200.000",
-        star: "4.8",
+        starNumber: "4.8",
         sold: "400"
     },
     {
         id: 10,
-        img: "/img/Baby Sitter.png", 
+        coverImage: "/img/Baby Sitter.png", 
         title: "Babysitter bersertifikasi dan terpercaya",
         price: "700.000",
-        star: "4.3",
+        starNumber: "4.3",
         sold: "150"
     },
     {
         id: 11,
-        img: "/img/Creative Writing.png", 
+        coverImage: "/img/Creative Writing.png", 
         title: "Jasa penulisan script konten/drama/film",
         price: "400.000",
-        star: "4.5",
+        starNumber: "4.5",
         sold: "750"
     },
     {
         id: 12,
-        img: "/img/lyric.png", 
+        coverImage: "/img/lyric.png", 
         title: "Jasa feature rap/hip-hop untuk semua genre lagu",
         price: "9.000.000",
-        star: "4.8",
+        starNumber: "4.8",
         sold: "100"
     },
     {
         id: 13,
-        img: "/img/Kennel Boy.png", 
+        coverImage: "/img/Kennel Boy.png", 
         title: "Jasa kennel boy untuk anabul tercinta",
         price: "450.000",
-        star: "4.7",
+        starNumber: "4.7",
         sold: "50"
     },
     {
         id: 14,
-        img: "/img/producing.png", 
+        coverImage: "/img/producing.png", 
         title: "Jasa membuat beat lagu untuk semua genre",
         price: "12.000.000",
-        star: "4.8",
+        starNumber: "4.8",
         sold: "250"
     },
     {
         id: 15,
-        img: "/img/Badut Online.png", 
+        coverImage: "/img/Badut Online.png", 
         title: "Jasa badut lucu untuk ulang tahun atau acara apapun",
         price: "300.000",
-        star: "5",
-        sold: "50+"
+        starNumber: "5",
+        sold: "50"
     }
 ]
