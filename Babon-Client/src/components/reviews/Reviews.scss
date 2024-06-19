@@ -1,0 +1,67 @@
+.reviews{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5vw;
+    border: 1px solid #65451F;
+    padding: 2%;
+    border-radius: 0.2vw;
+
+    h2{
+        font-size: 1.4vw;
+    }
+
+    .add{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: -4vw;
+        gap: 0.4vw;
+
+        h3{
+            font-size: 1vw;
+        }
+
+        .addForm{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0.4vw;
+
+            textarea{
+                padding: 2%;
+                resize: none;
+                border: 1px solid #65451F;
+                outline: none;
+                font-size: 1vw;
+                width: 104.5%;
+            }
+
+            .bottom{
+                display: flex;
+                justify-content: center;
+                gap: 0.2vw;
+
+                select{
+                    font-size: 1vw;
+                    border: 1px solid #65451F;
+                    outline: none;
+                }
+    
+                button{
+                    background-color: #65451F;
+                    color: white;
+                    font-size: 1vw;
+                    font-weight: 500;
+                    border: none;
+                    padding: 0.6vw;
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+
+}
