@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const PopularCard = ({item}) => {
   return (
-    <Link to="/services?category=design">
+    <Link to="/services?cat=design">
       <div className='popularCard'>
           <img src={item.img} alt="" />
           <span className='title'>{item.title}</span>

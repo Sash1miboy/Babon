@@ -4,7 +4,6 @@
 
     .container{
         display: flex;
-        width: 100%;
         padding: 2% 8%;
         gap: 2.5vw;
 
@@ -13,7 +12,6 @@
             flex: 2;
             flex-direction: column;
             gap: 2vw;
-            width: 100%;
 
             .header{
                 display: flex;
@@ -131,6 +129,70 @@
 
             }
 
+            .reviews{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 1.5vw;
+                border: 1px solid #65451F;
+                padding: 2%;
+                border-radius: 0.2vw;
+
+                h2{
+                    font-size: 1.4vw;
+                }
+
+                .item{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1vw;
+
+                    .user{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 0.4vw;
+
+                        img{
+                            width: 2vw;
+                            height: 2vw;
+                            border-radius: 50%;
+                        }
+
+                        span{
+                            font-size: 1vw;
+                        }
+                    }
+
+                    .ratings{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 0.4vw;
+
+                        img{
+                            width: 1vw;
+                            height: 1vw;
+                        }
+
+                        span{
+                            margin-bottom: -0.2vw;
+                            font-size: 0.8vw;
+                        }
+                    }
+
+                    p{
+                        font-size: 1vw;
+                    }
+
+                    hr{
+                        width: 100%;
+                    }
+                }
+            }
         }
 
         .right{
