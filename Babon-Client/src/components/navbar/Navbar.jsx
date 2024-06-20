@@ -21,6 +21,12 @@ const Navbar = () => {
     }
   }
 
+  const [input, setInput] = useState("");
+
+  const handleSubmit = ()=>{
+      navigate(`/services?search=${input}`)
+  };
+
   return (
     <div className='navbar'>
         <div className="container">
@@ -31,8 +37,8 @@ const Navbar = () => {
             </div>
             <div className="search">
               <div className="search-bar">
-                <input type="search" name="" id="" className='search-input' placeholder='Search...'/>
-                <button className='search-button'>
+                <input type="search" name="" id="" className='search-input' placeholder='Search...' onChange={(e)=>setInput(e.target.value)}/>
+                <button className='search-button' onClick={handleSubmit}>
                   <img className='search-icon' src="/img/Search.svg" alt="" />
                 </button>
               </div>
