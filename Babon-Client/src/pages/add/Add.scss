@@ -42,6 +42,18 @@
                     resize: none;
                 }
 
+                .images{
+                    display: flex;
+                    justify-content: center;
+                    gap: 1vw;
+
+                    .imagesInput{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1vw;
+                    }
+                }
+
                 button{
                     background-color: #65451F;
                     color: white;
@@ -52,6 +64,35 @@
                     padding: 0.6vw;
                     cursor: pointer;
                 }
+
+                .addForm{
+                    display: flex;
+                    justify-content: center;
+                    gap: 0.4vw;
+
+                    input{
+                        width: 100%;
+                    }
+                }
+
+                .addedFeatures{
+                    display: flex;
+                    gap: 1vw;
+
+                    button{
+                        background-color: red;
+                        color: white;
+                        font-size: 1vw;
+                        font-weight: 500;
+                        border: none;
+                        border-radius: 0.2vw;
+                        padding: 0.6vw;
+                        cursor: pointer;
+                        display: flex;
+                        gap: 1vw;
+                    }
+                }
+
             }
             
         }
