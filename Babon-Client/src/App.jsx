@@ -89,7 +89,7 @@ function App() {
           element:<Order/>
         },
         {
-          path:"/payment",
+          path:"/payment/:id",
           element:<Payment/>
         },
         {

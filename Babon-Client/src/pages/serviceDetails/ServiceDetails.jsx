@@ -80,7 +80,7 @@ const ServiceDetails = () => {
               </div>
             ))}
           </div>
-          <Link to="/order" className='link'>
+          <Link to={`/payment/${id}`} className='link'>
             <button>Order</button>
           </Link>
         </div>
