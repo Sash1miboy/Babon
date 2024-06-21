@@ -30,4 +30,13 @@ and then
 
 yarn start
 
+# For Payment
+Please don't use your real card number (I'M NOT RESPONSIBLE FOR YOUR MONEY LOSS)
+
+please use stripe test card:
+
+https://docs.stripe.com/testing
+
+(Ex: 4242424242424242)
+
 
