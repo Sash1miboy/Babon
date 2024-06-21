@@ -48,7 +48,7 @@ const Navbar = () => {
                 <img className='notif-icon' src="/img/Notif.svg" alt="" />
               )}
               {currentUser && !currentUser.isSeller && (
-                <Link className='link' to="/cart">
+                <Link className='link' to="/orderList">
                   <img className='cart-icon' src="/img/Cart.svg" alt="" />
                 </Link>
               )}
