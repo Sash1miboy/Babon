@@ -2,8 +2,9 @@
 My university group project for Software Engineering Course
 
 # Requirement
-Node.js
-yarn
+- Node.js
+
+- yarn
 
 # How to run client-side
 Go to the babon-client directory
