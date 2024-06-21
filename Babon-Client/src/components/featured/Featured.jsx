@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Featured.scss"
+import { useNavigate } from "react-router-dom";
 
-const Featured = () => {
+function Featured() {
+
+const [input, setInput] = useState("");
+const navigate = useNavigate();
+
+const handleSubmit = ()=>{
+    navigate(`/services?search=${input}`)
+};
+
   return (
     <div className='featured'>
         <div className="container">
@@ -11,9 +20,9 @@ const Featured = () => {
                     <h1>Accessible and Hassle-Free</h1>
                 </div>
                 <div className="search-bar-featured">
-                <input type="search" name="" id="" className='search-input-featured' placeholder='Search...'/>
+                    <input type="search" name="" id="" className='search-input-featured' placeholder='Search...' onChange={(e)=>setInput(e.target.value)}/>
                     <button className='search-button-featured'>
-                        <img className='search-icon-featured' src="/img/Search.svg" alt="" />
+                        <img className='search-icon-featured' src="/img/Search.svg" alt="" onClick={handleSubmit} />
                     </button>
                  </div>
                  <div className="popular">

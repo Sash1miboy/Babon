@@ -1,11 +1,42 @@
 import React from 'react'
 import "./ServiceList.scss"
 import { Link } from 'react-router-dom'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import newRequest from '../../utils/newRequest.js'
+import getCurrentUser from '../../utils/getCurrentUser.js'
 
 const ServiceList = () => {
+
+  const currentUser = getCurrentUser();
+
+  const queryClient = useQueryClient();
+
+  const { isLoading, error, data } = useQuery({
+    queryKey: ['servicesList'],
+    queryFn: () =>
+      newRequest.get(`/services?userId=${currentUser}`).then((res) => {
+        return res.data;
+      })
+  });
+
+  const mutation = useMutation({
+    mutationFn: (id) => {
+      return newRequest.delete(`/services/${id}`)
+    },
+    onSuccess:()=>{
+      queryClient.invalidateQueries(["serviceList"])
+    }
+  })
+
+  const handleDelete = (id) => {
+    mutation.mutate(id);
+  };
+
   return (
     <div className='serviceList'>
-      <div className="container">
+      {isLoading ? ("Loading!") 
+      : error ? ("Something went wrong!") 
+      : (<div className="container">
         <div className="title">
           <h1>Services</h1>
           <Link to="/add" className='link'>
@@ -20,93 +51,26 @@ const ServiceList = () => {
             <th>Rating</th>
             <th>Action</th>
           </tr>
-          <tr>
+          {data.map((service)=>{
+            <tr key={service._id}>
             <td>
               <img src="/img/lyric.png" alt="" className='foto'/>
             </td>
             <td>
-              Jasa feature rap/hip-hop untuk semua genre lagu
+              {service.title}
             </td>
             <td>
-              Rp9.000.000
+              Rp{service.price}
             </td>
             <td>
-              4.8
+              {service.totalStar}
             </td>
             <td>
-              <img src="/img/Delete.svg" alt="" className='delete'/>
+              <img src="/img/Delete.svg" alt="" className='delete' onClick={()=> handleDelete(service._id)}/>
             </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="/img/lyric.png" alt="" className='foto'/>
-            </td>
-            <td>
-              Jasa feature rap/hip-hop untuk semua genre lagu
-            </td>
-            <td>
-              Rp9.000.000
-            </td>
-            <td>
-              4.8
-            </td>
-            <td>
-              <img src="/img/Delete.svg" alt="" className='delete'/>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="/img/lyric.png" alt="" className='foto'/>
-            </td>
-            <td>
-              Jasa feature rap/hip-hop untuk semua genre lagu
-            </td>
-            <td>
-              Rp9.000.000
-            </td>
-            <td>
-              4.8
-            </td>
-            <td>
-              <img src="/img/Delete.svg" alt="" className='delete'/>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="/img/lyric.png" alt="" className='foto'/>
-            </td>
-            <td>
-              Jasa feature rap/hip-hop untuk semua genre lagu
-            </td>
-            <td>
-              Rp9.000.000
-            </td>
-            <td>
-              4.8
-            </td>
-            <td>
-              <img src="/img/Delete.svg" alt="" className='delete'/>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="/img/lyric.png" alt="" className='foto'/>
-            </td>
-            <td>
-              Jasa feature rap/hip-hop untuk semua genre lagu
-            </td>
-            <td>
-              Rp9.000.000
-            </td>
-            <td>
-              4.8
-            </td>
-            <td>
-              <img src="/img/Delete.svg" alt="" className='delete'/>
-            </td>
-          </tr>
+          </tr>})}
         </table>
-      </div>
+      </div>)}
     </div>
   )
 }
