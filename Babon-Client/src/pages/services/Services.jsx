@@ -42,8 +42,8 @@ function Services(){
   return (
     <div className='services'>
         <div className="container">
-            <h1>Music Production</h1>
-            <p>Professional Sound for Every Genre</p>
+            <h1>Others</h1>
+            <p>Professional Service For Sure!</p>
             <div className="menu">
                 <div className="left">
                     <span>Budget</span>

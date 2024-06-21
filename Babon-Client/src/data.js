@@ -48,6 +48,11 @@ export const cards = [
         id: 10,
         title: "Writing",
         img: "/img/Writing.jpg"
+    },
+    {
+        id: 11,
+        title: "Other",
+        img: "/img/Other.jpg"
     }
 ]
 
