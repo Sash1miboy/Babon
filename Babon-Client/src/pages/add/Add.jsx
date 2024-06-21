@@ -30,7 +30,7 @@ const Add = () => {
   const handleUpload = async (e) =>{
     setUploading(true);
     try {
-      const cover = await upload(singleFile);
+      const coverImage = await upload(singleFile);
 
       const images = await Promise.all(
         [...files].map( async file =>{
@@ -39,7 +39,7 @@ const Add = () => {
         })
       );
       setUploading(false);
-      dispatch({type: "ADD_IMAGES", payload: {cover: coverImage, images: images}})
+      dispatch({type: "ADD_IMAGES", payload: {coverImage, images}})
     } catch (err) {
       console.log(err)
     }
@@ -65,6 +65,7 @@ const Add = () => {
               <option value="video-editing">Video Editing</option>
               <option value="voice-over">Voice Over</option>
               <option value="writing">Writing</option>
+              <option value="writing">Other</option>
             </select>
             <div className="images">
               <div className="imagesInput">
