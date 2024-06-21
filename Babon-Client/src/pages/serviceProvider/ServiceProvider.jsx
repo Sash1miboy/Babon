@@ -11,7 +11,7 @@ const ServiceProvider = () => {
           <div className="seller">
             <img src="/img/dingle.png" alt="" />
             <div className="item">
-              <h1>Quandale Dingle</h1>
+              <h1>Raul Hernendez</h1>
               <div className="rating">
                 <img src="/img/star.png" alt="" />
                 <span>4.9</span>
@@ -28,7 +28,7 @@ const ServiceProvider = () => {
           <div className="seller-desc">
             <h1>About Me</h1>
             <p>
-              Hey, I'm Quandale Dingle, a professional toilet cleaner. 
+              Hey, I'm Raul Hernendez, a professional toilet cleaner. 
               I take pride in ensuring every restroom is spotless and 
               sanitary. For me, it's about providing a clean and 
               comfortable environment for everyone. I tackle tough stains 

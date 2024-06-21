@@ -1,8 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Payment.scss"
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import newRequest from '../../utils/newRequest';
+import CheckOutForm from '../../components/checkoutForm/CheckoutForm';
+
+const stripePromise = loadStripe("pk_test_51PQIzKCYxfWKUawXXvwtsj0LuhHo7jMHzcfvfYcsGWB5tZE8RfttcVUxqD7YqEx4Pg2x8sKzjFl3v5mq0THcAc0100SY1p4jwL");
+
 
 const Payment = () => {
+
+  const [clientSecret, setClientSecret] = useState("");
+
+  const {id} = useParams();
+
+  useEffect(()=>{
+    const makeRequest = async () => {
+      try {
+        const res = await newRequest.post(`/orders/create-payment-intent/${id}`);
+        setClientSecret(res.data.clientSecret);
+      } catch (err) {
+        console.log(err)
+      }
+    };
+    makeRequest();
+  }, []);
+
+  const appearance = {
+    theme: 'stripe',
+  };
+  const options = {
+    clientSecret,
+    appearance,
+  };
+
   return (
     <div className='payment'>
       <div className="container">
@@ -69,16 +101,21 @@ const Payment = () => {
           <div className="pay-form">
             <div className="method">
               <span>Payment Method</span>
-              <div className="method-button">
+              {/* <div className="method-button">
                 <button>Bank Transfer</button>
                 <button>GoPay</button>
                 <button>Credit Card</button>
                 <button>Debit Card</button>
-              </div>
+              </div> */}
             </div>
             <hr />
             <div className="pay-options">
-              <span>Select Bank</span>
+              {clientSecret && (
+                <Elements options={options} stripe={stripePromise}>
+                  <CheckOutForm />
+                </Elements>
+              )}
+              {/* <span>Select Bank</span>
               <div className="bank-list">
                 <div className="bca">
                   <input type="radio" name="bank" id="bca" />
@@ -100,13 +137,13 @@ const Payment = () => {
                   <input type="radio" name="bank" id="ocbc" />
                   <img src="/img/ocbc.svg" alt="" />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
-        <Link className='link' to="/success">
+        {/* <Link className='link' to="/success">
           <button type="submit" className='confirm'>Confirm</button>
-        </Link>
+        </Link> */}
       </div>
     </div>
   )

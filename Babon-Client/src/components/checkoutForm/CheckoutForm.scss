@@ -1,0 +1,19 @@
+.checkOut{
+    button{
+        margin-top: 3%;
+        background-color: #65451F;
+        color: white;
+        font-size: 1vw;
+        font-weight: 500;
+        border: none;
+        border-radius: 0.2vw;
+        padding: 0.6vw;
+        cursor: pointer;
+    
+        span{
+            .spinner{
+                font-size: 1vw;
+            }
+        }
+    }
+}
