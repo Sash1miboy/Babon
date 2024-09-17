@@ -5,9 +5,9 @@ import upload from '../../utils/upload.js'
 
 const Add = () => {
 
-  const [singleFile, setSingleFile] = useState(undefined)
-  const [files, setFiles] = useState([])
-  const [uploading, setUploading] = useState(false)
+  const [singleFile, setSingleFile] = useState(undefined);
+  const [files, setFiles] = useState([]);
+  const [uploading, setUploading] = useState(false);
 
   const [state, dispatch] = useReducer(serviceReducer, INITIAL_STATE)
 
@@ -33,7 +33,7 @@ const Add = () => {
       const coverImage = await upload(singleFile);
 
       const images = await Promise.all(
-        [...files].map( async file =>{
+        [...files].map( async (file) =>{
           const url = await upload(file);
           return url;
         })

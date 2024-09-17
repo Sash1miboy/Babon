@@ -1,17 +1,22 @@
 import React from 'react'
 import "./Chats.scss"
 import { Link } from 'react-router-dom'
+import { useQuery } from '@tanstack/react-query';
+import newRequest from '../../utils/newRequest';
 
 const Chats = () => {
 
-    const currentUser= {
-        id:1,
-        userName:"Kendrick Lamar",
-        isSeller:true
-    };
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-    const message = "Soon as i pull up and park the Benz we get this bitch shakin like Parkinson’s"
-    const message2 = "Hey Kendrick, I hope you're doing great! I'm Tupac, and I have an exciting opportunity for you. I'm working on my upcoming album, and I want to feature you on one of my tracks."
+    const { isLoading, error, data, refetch } = useQuery({
+      queryKey: ['chats'],
+      queryFn: () =>
+        newRequest.get(
+          `/chats`
+        ).then((res) => {
+          return res.data;
+        })
+    })
 
   return (
     <div className='chats'>
