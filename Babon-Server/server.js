@@ -5,7 +5,7 @@ import userRoute from "./routes/user.route.js";
 import serviceRoute from "./routes/service.route.js";
 import reviewRoute from "./routes/review.route.js";
 import orderRoute from "./routes/order.route.js";
-import messageRoute from "./routes/message.route.js";
+import chatRoute from "./routes/chat.route.js";
 import chatsRoute from "./routes/chats.route.js";
 import authRoute from "./routes/auth.route.js";
 import cookieParser from "cookie-parser";
@@ -33,7 +33,7 @@ app.use("/api/users", userRoute);
 app.use("/api/services", serviceRoute);
 app.use("/api/reviews", reviewRoute);
 app.use("/api/orders", orderRoute);
-app.use("/api/messages", messageRoute);
+app.use("/api/messages", chatRoute);
 app.use("/api/chats", chatsRoute);
 
 app.use((err, req, res, next)=>{

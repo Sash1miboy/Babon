@@ -1,11 +1,11 @@
 import createError from "../utils/createError.js"
-import Chat from "../models/chats.model.js"
+import Chats from "../models/chats.model.js"
 
 export const createChats = async (req, res, next)=>{
-    const newChat = new Chat({
+    const newChat = new Chats({
         id: req.isSeller ? req.userId + req.body.to : req.body.to + req.userId,
         sellerId: req.isSeller ? req.userId : req.body.to,
-        buyerId: req.isSeller ? req.userId : req.body.to,
+        buyerId: req.isSeller ? req.body.to : req.userId,
         readBySeller: req.isSeller, 
         readByBuyer: !req.isSeller,
     });
@@ -21,12 +21,11 @@ export const createChats = async (req, res, next)=>{
 export const updateChats = async (req, res, next)=>{
 
     try {
-        const updatedChat = await Chat.findByIdAndUpdate(
+        const updatedChat = await Chats.findOneAndUpdate(
             {id: req.params.id}, 
             {
                 $set: {
-                    readBySeller: req.isSeller,
-                    readByBuyer: !req.isSeller
+                    ...(req.isSeller ? {readBySeller: true} : {readByBuyer: true}),
                 },
             },
             {new: true}
@@ -38,9 +37,8 @@ export const updateChats = async (req, res, next)=>{
 }
 
 export const getSingleChat = async (req, res, next)=>{
-
     try {
-        const chat = await Chat.findOne({id:req.params.id});
+        const chat = await Chats.findOne({id:req.params.id});
         res.status(200).send(chat);
     } catch (err) {
         next(err);
@@ -48,9 +46,8 @@ export const getSingleChat = async (req, res, next)=>{
 }
 
 export const getChats = async (req, res, next)=>{
-
     try {
-        const chats = await Chat.find(
+        const chats = await Chats.find(
             req.isSeller ? {sellerId: req.userId} : {buyerId: req.userId}
         );
         res.status(200).send(chats);
