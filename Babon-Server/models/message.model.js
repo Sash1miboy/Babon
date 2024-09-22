@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const messageSchema = new Schema({
-    chatsId:{
+    messageId:{
         type:String,
         require: true,
     },

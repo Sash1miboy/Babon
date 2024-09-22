@@ -2,7 +2,7 @@ import React from 'react'
 import "./Chats.scss"
 import { Link } from 'react-router-dom'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import newRequest from '../../utils/newRequest';
+import newRequest from '../../utils/newRequest.js';
 import moment from 'moment';
 
 const Chats = () => {
@@ -59,7 +59,7 @@ const Chats = () => {
                     {currentUser.isSeller ? c.buyerId : c.sellerId}
                   </td>
                   <td>
-                    <Link to={`/chat/${c.id}`} className='link'>
+                    <Link to={`/message/${c.id}`} className='link'>
                       {c?.lastMessage?.substring(0,80)}...
                     </Link>
                   </td>

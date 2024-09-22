@@ -4,7 +4,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Add from "./pages/add/Add";
 import Cart from "./pages/cart/Cart";
-import Chat from "./pages/chat/Chat";
+import Message from "./pages/message/Message";
 import Chats from "./pages/chats/Chats";
 import Help from "./pages/help/Help";
 import History from "./pages/history/History";
@@ -16,7 +16,7 @@ import ServiceProvider from "./pages/serviceProvider/ServiceProvider";
 import ServiceList from "./pages/serviceList/ServiceList";
 import Services from "./pages/services/Services";
 import OrderList from "./pages/orderList/OrderList";
-import Login from "./pages/login/Login"
+import Login from "./pages/login/Login";
 import Register from "./pages/register/Register"
 import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import Success from "./pages/success/Success";
@@ -69,8 +69,8 @@ function App() {
           element:<Cart/>
         },
         {
-          path:"/chat/:id",
-          element:<Chat/>
+          path:"/message/:id",
+          element:<Message/>
         },
         {
           path:"/chats",

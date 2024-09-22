@@ -39,6 +39,7 @@ export const updateChats = async (req, res, next)=>{
 export const getSingleChat = async (req, res, next)=>{
     try {
         const chat = await Chats.findOne({id:req.params.id});
+        if(!chat) return next(createError(404, "Not Found!"));
         res.status(200).send(chat);
     } catch (err) {
         next(err);
@@ -49,7 +50,7 @@ export const getChats = async (req, res, next)=>{
     try {
         const chats = await Chats.find(
             req.isSeller ? {sellerId: req.userId} : {buyerId: req.userId}
-        );
+        ).sort({updatedAt: -1})
         res.status(200).send(chats);
     } catch (err) {
         next(err);
