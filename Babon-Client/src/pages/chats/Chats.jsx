@@ -1,74 +1,77 @@
 import React from 'react'
 import "./Chats.scss"
 import { Link } from 'react-router-dom'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import newRequest from '../../utils/newRequest.js';
+import moment from 'moment';
 
 const Chats = () => {
 
-    const currentUser= {
-        id:1,
-        userName:"Kendrick Lamar",
-        isSeller:true
-    };
+  
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  
+  const queryClient = useQueryClient();
 
-    const message = "Soon as i pull up and park the Benz we get this bitch shakin like Parkinson’s"
-    const message2 = "Hey Kendrick, I hope you're doing great! I'm Tupac, and I have an exciting opportunity for you. I'm working on my upcoming album, and I want to feature you on one of my tracks."
+  const { isLoading, error, data } = useQuery({
+    queryKey: ['chats'],
+    queryFn: () =>
+      newRequest.get(
+        `/chats`
+      ).then((res) => {
+        return res.data;
+      })
+  })
+
+  const mutation = useMutation({
+    mutationFn: (id) => {
+      return newRequest.put(`/chats/${id}`);
+    },
+    onSuccess:()=>{
+      queryClient.invalidateQueries(["chats"])
+    }
+  })
+
+  const handleRead = (id)=>{
+    mutation.mutate(id);
+  }
 
   return (
     <div className='chats'>
-        <div className="container">
-        <div className="title">
-          <h1>Messages</h1>
-        </div>
-        <table>
-          <tr>
-            <th>Buyer</th>
-            <th>Last Message</th>
-            <th>Date</th>
-            <th>Action</th>
-          </tr>
-          <tr className='active'> 
-            <td>
-              Tupac Shakur
-            </td>
-            <td><Link to="/chat/123" className='link'>{message2.substring(0,80)}...</Link></td>
-            <td>1 day ago</td>
-            <td>
-              <button>Mark as Read</button>
-            </td>
-          </tr>
-          <tr className='active'>
-            <td>
-              Kanye West
-            </td>
-            <td><Link to="/chat/123" className='link'>{message.substring(0,80)}...</Link></td>
-            <td>1 day ago</td>
-            <td>
-              <button>Mark as Read</button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Kanye West
-            </td>
-            <td><Link to="/chat/123" className='link'>{message.substring(0,80)}...</Link></td>
-            <td>1 day ago</td>
-          </tr>
-          <tr>
-            <td>
-              Kanye West
-            </td>
-            <td><Link to="/chat/123" className='link'>{message.substring(0,80)}...</Link></td>
-            <td>1 day ago</td>
-          </tr>
-          <tr>
-            <td>
-              Kanye West
-            </td>
-            <td><Link to="/chat/123" className='link'>{message.substring(0,80)}...</Link></td>
-            <td>1 day ago</td>
-          </tr>
-        </table>
-      </div>
+      {isLoading ? (
+        "loading"
+        ) : error ? (
+          "Something went wrong!"
+          ) : (
+          <div className="container">
+            <div className="title">
+              <h1>Messages</h1>
+            </div>
+            <table>
+              <tr>
+                <th>Buyer</th>
+                <th>Last Message</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+              {data.map((c) => (
+                <tr className={((currentUser.isSeller && !c.readBySeller) || (!currentUser.isSeller && !c.readByBuyer)) && ("active")} key={c.id}> 
+                  <td>
+                    {currentUser.isSeller ? c.buyerId : c.sellerId}
+                  </td>
+                  <td>
+                    <Link to={`/message/${c.id}`} className='link'>
+                      {c?.lastMessage?.substring(0,80)}...
+                    </Link>
+                  </td>
+                  <td>{moment(c.updatedAt).fromNow()}</td>
+                  <td>
+                    {((currentUser.isSeller && !c.readBySeller) || (!currentUser.isSeller && !c.readByBuyer)) && (<button onClick={()=>handleRead(c.id)}>Mark as Read</button>)}
+                  </td>
+                </tr>
+              ))}
+            </table>
+          </div>
+        )}
     </div>
   )
 }

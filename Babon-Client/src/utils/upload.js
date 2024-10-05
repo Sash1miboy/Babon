@@ -6,7 +6,7 @@ const upload = async (file) => {
     data.append("upload_preset", "Babonv1");
 
     try {
-        const res = await axios.post("https://api.cloudinary/v1_1/dlz9affpa/image/upload", data)
+        const res = await axios.post("https://api.cloudinary.com/v1_1/dlz9affpa/image/upload", data)
         const {url} = res.data;
         return url;
     } catch (err) {
