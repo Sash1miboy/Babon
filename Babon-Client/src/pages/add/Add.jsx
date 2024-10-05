@@ -1,24 +1,26 @@
-import React, { useReducer, useState } from 'react'
-import "./Add.scss"
-import { INITIAL_STATE, serviceReducer } from '../../reducers/serviceReducer'
-import upload from '../../utils/upload.js'
+import React, { useReducer, useState } from "react";
+import "./Add.scss";
+import { INITIAL_STATE, serviceReducer } from "../../reducers/serviceReducer";
+import upload from "../../utils/upload.js";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import newRequest from "../../utils/newRequest.js";
+import { useNavigate } from "react-router-dom";
 
 const Add = () => {
+  const [singleFile, setSingleFile] = useState(undefined);
+  const [files, setFiles] = useState([]);
+  const [uploading, setUploading] = useState(false);
 
-  const [singleFile, setSingleFile] = useState(undefined)
-  const [files, setFiles] = useState([])
-  const [uploading, setUploading] = useState(false)
+  const [state, dispatch] = useReducer(serviceReducer, INITIAL_STATE);
 
-  const [state, dispatch] = useReducer(serviceReducer, INITIAL_STATE)
-
-  const handleChange = (e) =>{
+  const handleChange = (e) => {
     dispatch({
       type: "CHANGE_INPUT",
-      payload: {name: e.target.name, value: e.target.value},
+      payload: { name: e.target.name, value: e.target.value },
     });
-  }
+  };
 
-  const handleFeature = (e) =>{
+  const handleFeature = (e) => {
     e.preventDefault();
     dispatch({
       type: "ADD_FEATURE",
@@ -27,32 +29,59 @@ const Add = () => {
     e.target[0].value = "";
   };
 
-  const handleUpload = async (e) =>{
+  const handleUpload = async () => {
     setUploading(true);
     try {
       const coverImage = await upload(singleFile);
 
       const images = await Promise.all(
-        [...files].map( async file =>{
+        [...files].map(async (file) => {
           const url = await upload(file);
           return url;
         })
       );
       setUploading(false);
-      dispatch({type: "ADD_IMAGES", payload: {coverImage, images}})
+
+      dispatch({ type: "ADD_IMAGES", payload: { coverImage, images } });
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
   };
 
+  const navigate = useNavigate();
+
+  const queryClient = useQueryClient();
+
+  const mutation = useMutation({
+    mutationFn: (service) => {
+      return newRequest.post(`/services`, service);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries(["serviceList"]);
+    },
+  });
+
+  console.log(state);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    mutation.mutate(state);
+    navigate("/serviceList");
+  };
+
   return (
-    <div className='add'>
+    <div className="add">
       <div className="container">
         <h1>Add New Service</h1>
         <div className="sections">
           <div className="left">
             <label htmlFor="">Title</label>
-            <input type="text" name='title' placeholder='e.g Jasa fotografi untuk acara spesial' onChange={handleChange}/>
+            <input
+              type="text"
+              name="title"
+              placeholder="e.g Jasa fotografi untuk acara spesial"
+              onChange={handleChange}
+            />
             <label htmlFor="">Category</label>
             <select name="category" id="category" onChange={handleChange}>
               <option value="accounting">Accounting</option>
@@ -70,40 +99,75 @@ const Add = () => {
             <div className="images">
               <div className="imagesInput">
                 <label htmlFor="">Cover Image</label>
-                <input type="file" name="" id="" onChange={e=>setFiles(e.target.files)}/>
+                <input
+                  type="file"
+                  onChange={(e) => setSingleFile(e.target.files[0])}
+                />
                 <label htmlFor="">Upload Image</label>
-                <input type="file" name="desc" id="" multiple onChange={e=>setSingleFile(e.target.files[0])}/>
+                <input
+                  type="file"
+                  multiple
+                  onChange={(e) => setFiles(e.target.files)}
+                />
               </div>
-              <button onClick={handleUpload}>{uploading ? "Uploading" : "Upload"}</button>
+              <button onClick={handleUpload}>
+                {uploading ? "Uploading" : "Upload"}
+              </button>
             </div>
             <label htmlFor="">Description</label>
-            <textarea name="" id="" cols="30" rows="16" placeholder='Penjelasan tentang service anda' onChange={handleChange}></textarea>
+            <textarea
+              name="desc"
+              id=""
+              cols="30"
+              rows="16"
+              placeholder="Penjelasan tentang service anda"
+              onChange={handleChange}
+            ></textarea>
           </div>
           <div className="right">
             <label htmlFor="">Service Title</label>
-            <input type="text" name='shortTitle' placeholder='e.g Jasa photography' onChange={handleChange}/>
+            <input
+              type="text"
+              name="shortTitle"
+              placeholder="e.g Jasa photography"
+              onChange={handleChange}
+            />
             <label htmlFor="">Short Description</label>
-            <textarea name="shortDesc" id="" cols="30" rows="5" placeholder='Penjelasan singkat service anda' onChange={handleChange}></textarea>
+            <textarea
+              name="shortDesc"
+              id=""
+              cols="30"
+              rows="5"
+              placeholder="Penjelasan singkat service anda"
+              onChange={handleChange}
+            ></textarea>
             <label htmlFor="">Add Features</label>
-            <form action="" onSubmit={handleFeature} className='addForm'>
-              <input type="text" placeholder='e.g jasa foto'/>
-              <button type='submit'>Add</button>
+            <form action="" onSubmit={handleFeature} className="addForm">
+              <input type="text" placeholder="e.g jasa foto" />
+              <button type="submit">Add</button>
             </form>
             <div className="addedFeatures">
-              {state?.features?.map((f)=>(
+              {state?.features?.map((f) => (
                 <div className="item" key={f}>
-                <button onClick={()=>dispatch({type:"REMOVE_FEATURE", payload: f })}>{f}<span>X</span></button>
-              </div>
+                  <button
+                    onClick={() =>
+                      dispatch({ type: "REMOVE_FEATURE", payload: f })
+                    }
+                  >
+                    {f}
+                    <span>X</span>
+                  </button>
+                </div>
               ))}
             </div>
             <label htmlFor="">Price</label>
-            <input type="number" min={1} name='price' onChange={handleChange}/>
-            <button>Create</button>
+            <input type="number" min={1} name="price" onChange={handleChange} />
+            <button onClick={handleSubmit}>Create</button>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Add
+export default Add;
