@@ -1,42 +1,68 @@
 # Babon
-My university group project for Software Engineering Course
 
-# Requirement
-- Node.js
+**Babon** is a full-stack web application designed to provide a range of services, leveraging the MERN stack (MongoDB, Express.js, React.js, and Node.js). This project aims to offer users an intuitive and seamless experience while interacting with the platform, focusing on both functionality and user interface design.
 
-- yarn
+## Features
 
-# How to run client-side
-Go to the babon-client directory
+### Finished
 
-in the terminal
+- **Payment Integration:** Secure payment processing for user transactions.
+- **Service Management:** Ability to add and manage services offered on the platform.
+- **Interactive UI/UX:** Engaging and user-friendly interface developed with React.js, enhancing overall user experience.
+- **RESTful API:** Efficient communication between the client and server using Express.js and Node.js.
+- **Messaging System:** Enables users to communicate seamlessly within the application.
+- **Review System:** Users can leave reviews for services, promoting transparency and trust.
+- **Order Management:** Users can easily track and manage their orders.
 
-type
+### In Progress
 
-yarn (for downloading all the dependecies)
+- **Responsive Web Design:** Ensuring usability across various devices and screen sizes.
+- **Bug Fixing:** Addressing existing issues for improved stability and performance.
+- **Quality Enhancements:** Ongoing improvements to the application's performance and user experience.
+- **Seller Service List:** Displaying a comprehensive list of services provided by sellers.
+- **User History:** Allowing users to view their past transactions and activities.
+- **User Location on Payment Page:** Incorporating user location features for enhanced payment processing.
 
-yarn run dev
+## Tech Stack
 
-# How to run server-side
-Go to the babon-server directory
+- **Frontend:** React.js, HTML, CSS, JavaScript
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
 
-in the terminal
+## Getting Started
 
-type
+To get a local copy of this project up and running, follow these simple steps:
 
-yarn
+1. Clone the repo:
 
-and then
+   ```bash
+   git clone https://github.com/yourusername/babon.git
+   ```
+2. Install dependencies (using Yarn recommended, but npm is also supported):
 
-yarn start
+   # Using Yarn
+   ```bash
+   cd babon-server
+   yarn install
+   cd ../babon-client
+   yarn install
+   ```
+   # Or using npm
+   ```bash
+   cd babon-server
+   npm install
+   cd ../babon-client
+   npm install
+   ```
+3. Start The Server and Client:
 
-# For Payment
-Please don't use your real card number (I'M NOT RESPONSIBLE FOR YOUR MONEY LOSS)
-
-please use stripe test card:
-
-https://docs.stripe.com/testing
-
-(Ex: 4242424242424242)
-
-
+   # Start the server
+   ```bash
+   cd babon-server
+   yarn start
+   ```
+   # Start the client
+   ```bash
+   cd ../babon-client
+   yarn dev
+   ```
