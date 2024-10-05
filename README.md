@@ -36,7 +36,7 @@ To get a local copy of this project up and running, follow these simple steps:
 1. Clone the repo:
 
    ```bash
-   git clone https://github.com/yourusername/babon.git
+   git clone https://github.com/Sash1miboy/Babon.git
    ```
 2. Install dependencies (using Yarn recommended, but npm is also supported):
 
